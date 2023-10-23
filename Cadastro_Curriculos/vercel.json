@@ -1,12 +1,12 @@
 {
     "version": 2,
     "builds": [{
-        "src": "Cadastro_Curriculos/server.js",
+        "src": "server.js",
         "use": "@vercel/node" 
     }],
     "routes": [
     {
         "src": "(.*)",
-        "dest": "Cadastro_Curriculos/server.js"
+        "dest": "server.js"
     }]
 }
