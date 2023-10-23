@@ -5,12 +5,13 @@ const db = require('../db');
 
 router.get('/curriculos', async (req, res) => {
   try {
-    const curriculos = await db.any('SELECT * FROM curriculum'); 
+    const curriculos = await db.query('SELECT * FROM curriculum'); 
     res.json(curriculos);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 });
+
 
 router.post('/curriculos', async (req, res) => {
   const { first_name, last_name, email, phone_number, address, experience, skills } = req.body;
